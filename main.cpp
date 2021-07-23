@@ -16,11 +16,14 @@ int  main()
         circle(image, Point(400+i, 200), 40, Scalar(255, 255, 255), -1);
         circle(image, Point(200+i, 200), 10, Scalar(0, 0, 0), -1);
         circle(image, Point(400+i, 200), 10, Scalar(0, 0, 0), -1);
-        imshow("Imagem",image);
-        waitKey(100);
         rectangle(image, Point(200+i, 600), Point(600, 500), Scalar(100, 100, 200), -1);
+        if(i == 0){ // o primeiro frame demora mais
+            imshow("Imagem",image);
+            waitKey(1000);
+        }
         rectangle(image, Point(250, 500+i), Point(550, 500), Scalar(255, 255, 255), -1);
         imshow("Imagem",image);
+        waitKey(100);
     }
     waitKey(0);
     imshow("Imagem",image);
